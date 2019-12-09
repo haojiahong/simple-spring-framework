@@ -1,4 +1,4 @@
-package com.hjh;
+package com.hjh.ioc;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

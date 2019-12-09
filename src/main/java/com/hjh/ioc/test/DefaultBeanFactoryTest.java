@@ -1,8 +1,8 @@
-package com.hjh.test;
+package com.hjh.ioc.test;
 
-import com.hjh.BeanDefinition;
-import com.hjh.DefaultBeanFactory;
-import com.hjh.GeneralBeanDefinition;
+import com.hjh.ioc.BeanDefinition;
+import com.hjh.ioc.DefaultBeanFactory;
+import com.hjh.ioc.GeneralBeanDefinition;
 import org.junit.AfterClass;
 import org.junit.Test;
 

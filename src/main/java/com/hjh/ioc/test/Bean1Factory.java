@@ -1,4 +1,4 @@
-package com.hjh.test;
+package com.hjh.ioc.test;
 
 /**
  * @author haojiahong created on 2019/12/6

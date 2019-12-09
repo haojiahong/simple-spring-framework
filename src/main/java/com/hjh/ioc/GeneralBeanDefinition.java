@@ -1,7 +1,9 @@
-package com.hjh;
+package com.hjh.ioc;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.util.List;
 
 /**
@@ -15,6 +17,9 @@ public class GeneralBeanDefinition implements BeanDefinition {
     private String initMethodName;
     private String destroyMethodName;
     private List<?> constructorArgumentValues;
+    private Constructor<?> constructor;
+    private Method factoryMethod;
+    private List<PropertyValue> propertyValues;
 
 
     public void setScope(String scope) {
@@ -66,6 +71,35 @@ public class GeneralBeanDefinition implements BeanDefinition {
     @Override
     public List<?> getConstructorArgumentValues() {
         return this.constructorArgumentValues;
+    }
+
+    @Override
+    public Constructor<?> getConstructor() {
+        return this.constructor;
+    }
+
+    @Override
+    public void setConstructor(Constructor<?> constructor) {
+        this.constructor = constructor;
+    }
+
+    @Override
+    public Method getFactoryMethod() {
+        return this.factoryMethod;
+    }
+
+    @Override
+    public void setFactoryMethod(Method method) {
+        this.factoryMethod = method;
+    }
+
+    @Override
+    public List<PropertyValue> getPropertyValues() {
+        return this.propertyValues;
+    }
+
+    public void setPropertyValues(List<PropertyValue> propertyValues) {
+        this.propertyValues = propertyValues;
     }
 
     public void setBeanClass(Class<?> beanClass) {

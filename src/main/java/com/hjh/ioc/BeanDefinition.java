@@ -1,7 +1,9 @@
-package com.hjh;
+package com.hjh.ioc;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.util.List;
 
 /**
@@ -28,6 +30,17 @@ public interface BeanDefinition {
     String getDestoryMethodName();
 
     List<?> getConstructorArgumentValues();
+
+    public Constructor<?> getConstructor();
+
+    public void setConstructor(Constructor<?> constructor);
+
+    public Method getFactoryMethod();
+
+    public void setFactoryMethod(Method method);
+
+    List<PropertyValue> getPropertyValues();
+
 
     //tips:java8开始就可以直接写接口默认方法了
     default boolean validate() {
